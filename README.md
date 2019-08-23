@@ -3,6 +3,8 @@
 This repo is used for creating a fabric network in a Hyperledger Fabric node.
 It is assumed you have a Hyperledger Fabric node, with the prerequisite installation done and all required components, including the docker images, tools and fabric samples.
 
+Note: This repo has been tested using release 1.4.2.
+
 ## Instruction
 Step 1: clone this repo in fabric-samples directory
 ```
