@@ -68,7 +68,7 @@ Step 6: If everything looks good, you now have a fabric network with 3 organizat
 
 Step 7: clean up: always good practice for cleaning up stuff after testing
 ```
-docker-compose -f docker-compose-cli.yaml --volumes --remove-orphans
+docker-compose -f docker-compose-cli.yaml down --volumes --remove-orphans
 docker rm $(docker ps -aq)
 docker rmi $(docker images dev-* -q)
 ```
