@@ -3,7 +3,7 @@
 This repo is used for creating a fabric network in a Hyperledger Fabric node.
 It is assumed you have a Hyperledger Fabric node, with the prerequisite installation done and all required components, including the docker images, tools and fabric samples.
 
-Note: This repo has been tested using release 1.4.2.
+Note: This setup has been tested using release 1.4.2.
 
 ## Instruction
 Step 1: clone this repo in fabric-samples directory
@@ -49,7 +49,7 @@ For Org3
 docker exec -e "CORE_PEER_LOCALMSPID=Org3MSP" -e "CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org3.example.com/users/Admin@org3.example.com/msp" -e "CORE_PEER_ADDRESS=peer0.org3.example.com:7051" -it cli bash 
 ```
 
-Step 5: create and join channel
+Step 6: create and join channel
 
 Org1
 ```
@@ -66,9 +66,9 @@ Org3
 peer channel join -b mychannel.block
 ```
 
-Step 6: If everything looks good, you now have a fabric network with 3 organizations set, and ready for testing any chaincode.
+Step 7: If everything looks good, you now have a fabric network with 3 organizations set, and ready for testing any chaincode.
 
-Step 7: clean up: always good practice for cleaning up stuff after testing
+Step 8: clean up: always good practice for cleaning up stuff after testing
 ```
 docker-compose -f docker-compose-cli.yaml down --volumes --remove-orphans
 docker rm $(docker ps -aq)
